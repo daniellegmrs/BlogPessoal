@@ -1,1 +1,132 @@
-<p>inicio works!</p>
+<!-- <div class="container-fluid">
+
+    <div class="row" id="bgImg">
+        <div class="container d-flex">
+            <div class="col-md-6 text-white">
+                <h1>TESTE</h1>
+                <p>kakakakakakkaka</p>
+                <div class="row justify-content-around">
+                    <button class="btn btn-light" data-toggle="modal" data-target="#exampleModal">blablabla</button>
+                    <button class="btn btn-light">blebleble</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="../../assets/img/welcome-to-twin-peaks-1200x628-facebook.jpg.crdownload" alt="" class="img-fluid">
+            </div> 
+        </div>
+        
+    </div>
+
+    <div class="row mt-4">
+        <div class="container">
+            <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="tdsPostagens-tab" data-toggle="tab" href="#tdsPostagens" role="tab" aria-controls="tdsPostagens" aria-selected="true">tdsPostagens</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                <a class="nav-link" id="mnhsPostagens-tab" data-toggle="tab" href="#mnhsPostagens" role="tab" aria-controls="mnhsPostagens" aria-selected="false">mnhsPostagens</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pstgnsTema-tab" data-toggle="tab" href="#pstgnsTema" role="tab" aria-controls="pstgnsTema" aria-selected="false">pstgnsTema</a>
+                </li>
+            </ul>
+            <div class="tab-content d-flex justify-content-center" id="myTabContent">
+                <div class="tab-pane fade show active" id="tdsPostagens" role="tabpanel" aria-labelledby="tdsPostagens-tab">...</div>
+                <div class="tab-pane fade" id="mnhsPostagens" role="tabpanel" aria-labelledby="mnhsPostagens-tab">...</div>
+                <div class="tab-pane fade" id="pstgnsTema" role="tabpanel" aria-labelledby="pstgnsTema-tab">...</div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+  
+
+
+  <div class="container-fluid">
+
+    <div class="row bg-secondary d-flex align-items-center">
+      <div class="col-md-6">
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6 text-white">
+            <h1 class="fs-54">Hello Stranger!</h1>
+            <h5 class="fs-18">testestestestetste</h5>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="col-md-6">
+            <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">nova postagem</button>
+            <a class="btn btn-outline-light" href="#postagens">ver postagens</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="colmd-6 d-flex justify-content-center">
+        <img src="../../assets/img/Astronaut suit-pana.png" alt="" width="500px" height="500px">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container" id="postagens">
+    <div class="row mt-4">
+      <div class="container">
+          <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+              <a class="nav-link active texte-secondary" id="tdsPostagens-tab" data-toggle="tab" href="#tdsPostagens" role="tab" aria-controls="tdsPostagens" aria-selected="true">Todas as Postagens</a>
+              </li>
+
+              <li class="nav-item" role="presentation">
+              <a class="nav-link texte-secondary" id="mnhsPostagens-tab" data-toggle="tab" href="#mnhsPostagens" role="tab" aria-controls="mnhsPostagens" aria-selected="false">Minhas Postagens</a>
+              </li>
+
+              <li class="nav-item" role="presentation">
+              <a class="nav-link texte-secondary" id="pstgnsTema-tab" data-toggle="tab" href="#pstgnsTema" role="tab" aria-controls="pstgnsTema" aria-selected="false">Postagens por Tema</a>
+              </li>
+          </ul>
+
+          <div class="tab-content d-flex justify-content-center" id="myTabContent">
+              <div class="tab-pane fade show active" id="tdsPostagens" role="tabpanel" aria-labelledby="tdsPostagens-tab">Todas as postagens</div>
+              <div class="tab-pane fade" id="mnhsPostagens" role="tabpanel" aria-labelledby="mnhsPostagens-tab">Minhas Postagens</div>
+              <div class="tab-pane fade" id="pstgnsTema" role="tabpanel" aria-labelledby="pstgnsTema-tab">Postagens por Tema</div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+
+<div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea class="form-control" name="texto" id="texto" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a href="">cadastre um novo:</a> </label>
+          <select name="tema" id="tema" class="form-control">
+            <option value="">Temas</option>
+          </select>
+        </div>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
