@@ -10,9 +10,8 @@ import { UsuarioLogin } from '../Model/UsuarioLogin';
 })
 export class AuthService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
+
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
     return this.http.post<UsuarioLogin>('https://blogpessoalthiago.herokuapp.com/usuarios/logar', usuarioLogin)
@@ -22,7 +21,12 @@ export class AuthService {
     return this.http.post<Usuario>('https://blogpessoalthiago.herokuapp.com/usuarios/cadastrar', usuario)
 }
 
-logado(){
+
+getByIdUsuario(id: number): Observable<Usuario>{
+  return this.http.get<Usuario>(`https://blogpessoalthiago.herokuapp.com/usuarios/${id}`)
+}
+
+logado() {
   let ok: boolean = false
 
   if(environment.token != ''){

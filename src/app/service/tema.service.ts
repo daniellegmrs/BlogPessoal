@@ -38,4 +38,5 @@ export class TemaService {
     return this.http.delete(`https://blogpessoalthiago.herokuapp.com/temas/${id}`, this.token)
   }
 
+  
 }
