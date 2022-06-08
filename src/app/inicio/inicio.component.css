@@ -1,0 +1,15 @@
+#bgImg{
+    background-image: url(../../assets/img/welcome-to-twin-peaks-1200x628-facebook.jpg.crdownload );
+
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fs-54{
+    font-size: 54pt;
+}
+
+.fs-18{
+    font-size: 18pt;
+}
